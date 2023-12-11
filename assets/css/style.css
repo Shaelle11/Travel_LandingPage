@@ -28,7 +28,6 @@
 
 .section__container {
     max-width: var(--max-width);
-    padding: 5rem 1rem;
     margin: auto;
     padding: 2rem 1rem;
 }
@@ -41,11 +40,16 @@ nav {
     max-width: var(--max-width);
     margin: auto;
     padding: 2rem 1rem;
+    justify-content: space-between;
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
 
+.navigations{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+}
 .logo {
     display: flex;
     gap: 10px;
@@ -53,6 +57,7 @@ nav {
     font-weight: 500;
     text-transform: capitalize;
     align-items: center;
+    width: 20%;
 }
 
 .Trabook {
@@ -71,18 +76,13 @@ nav {
     fill: var(--text-color-grey);
 }
 
-.all__links {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 158px;
-}
 
 .nav__links {
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 1rem;
+    justify-content: space-evenly;
+width: 60%;
 }
 
 .link a {
@@ -100,7 +100,8 @@ nav {
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 3.5em;
+    justify-content: space-between;
+    width: 33%;
 }
 
 .nav__links__right a {
@@ -136,17 +137,12 @@ nav {
 
 
 /* hero section */
-
-
 .hero__body {
     display: flex;
     flex-wrap: wrap;
-    background-image: url(/assets/Images/tourist-with-thumb-up__1_-removebg\ 1.png);
-    background-repeat: no-repeat;
-    background-position: right center;
-    height: 530px;
+    width: 100%;
+    justify-content: space-between;
     position: relative;
-    /* position: cover right; */
 }
 
 .hero_left {
@@ -167,7 +163,6 @@ nav {
 .hero_left p {
     max-width: 497px;
     color: var(--Paragraph, #666);
-
     font-family: Poppins;
     font-size: 20px;
     font-style: normal;
@@ -196,7 +191,14 @@ nav {
     line-height: 32px;
     margin-top: 78px;
 }
-
+.smiling_man{
+    position: absolute;
+    top: 0%;
+z-index: -1;
+right: 0%;
+width: 450px;
+height: 530px;
+}
 .card {
     position: absolute;
     display: flex;
@@ -817,7 +819,9 @@ nav {
     align-self: flex-end;
 
 }
-
+.burger{
+    display: none;
+}
 .Ratings .Rates img {
     width: 16px;
     height: 16px;
@@ -1628,4 +1632,94 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 opacity: 0.8;
+}
+.burger_logo{
+    display: none;
+}
+@media screen and (max-width: 830px) {
+ nav{
+ position: relative;
+ }
+
+ .burger_logo {
+    display: flex;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    align-items: center;
+    width: 20%;
+    position: absolute;
+    align-self: start;
+
+}
+
+.burger_logo .Trabook {
+    color: var(--primary-color);
+    font-family: Volkhov;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.144px;
+}
+
+.burger_logo .logo_img {
+    width: 19px;
+    height: 19px;
+    color:var(--primary-color);
+}
+.navigations{
+    display: none;
+}
+ .menu{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 18%;
+    right: 0%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    gap: 1rem;
+    padding: 1rem;
+ }
+
+    .nav__links{
+        display:grid;
+        text-align: center;
+        gap: 1rem;
+    }
+    .nav__links__right{
+        display: grid;
+        text-align: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .burger{
+        display: flex;
+        align-self: end;
+        cursor: pointer;
+    }
+    .burger .fa-bars{
+        display: flex;
+color: var(--primary-color);
+width: 24px;
+height: 24px;
+    }
+    .burger .fa-xmark{
+    color: var(--primary-color);
+width: 24px;
+height: 24px;
+    }
+    .hidden{
+        display: none;
+    }
+
+.hero__body .card{
+        display: none;
+    }
+
 }
