@@ -77,3 +77,30 @@ window.onload = function () {
         prevButton.addEventListener("click", showPrevSlide);
         nextButton.addEventListener("click", showNextSlide);
       };
+
+      function dropdownLocation() {
+        const dropDownbtn = document.querySelector(".dropdown_btn");
+        const dropdownContent = document.querySelector(".dropdown-content");
+     dropDownbtn.addEventListener("click", function(){
+        var isOpen = dropdownContent.style.display;
+        dropdownContent.style.display = isOpen === "none"? "flex" : "none";
+     })
+      }
+
+     function dropDate() {
+        const dropdatebtn = document.querySelector(".dropdown_btn_date");
+        const dropdowndate = document.querySelector(".dropdown-date");
+     dropdatebtn.addEventListener("click", function(){
+        var isOpen = dropdowndate.style.display;
+        dropdowndate.style.display = isOpen === "none"? "block" : "none";
+     })
+      }
+
+ function Numbercount() {
+        const dropcountbtn = document.querySelector(".dropdown_btn_no");
+        const dropdownNo = document.querySelector(".dropdown-num");
+     dropcountbtn.addEventListener("click", function(){
+        var isOpen = dropdownNo.style.display;
+        dropdownNo.style.display = isOpen === "none"? "block" : "none";
+     })
+      }

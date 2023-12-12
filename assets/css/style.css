@@ -332,6 +332,7 @@ height: 530px;
     box-shadow: 0px 2px 80px 2px rgba(0, 0, 0, 0.06);
     display: flex;
     padding: 24px;
+    position: relative;
     justify-content: space-between;
 }
 .question_container .links{
@@ -343,6 +344,8 @@ height: 530px;
 .question_tabs {
     display: flex;
     padding: 120px 190px;
+    position: relative;
+    
 }
 
 .question_links{
@@ -353,12 +356,17 @@ height: 530px;
 }
 .question_top {
     width: 70%;
-display: flex;
+display: grid;
 align-items: center;
     gap: 5px;
+    position: relative;
 }
 
-.question_top h1 {
+.question_top .heading {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: white;
     color: var(--primary-color-dark);
     font-family: Poppins;
     font-size: 16px;
@@ -366,6 +374,23 @@ align-items: center;
     font-weight: 500;
     line-height: normal;
     width: 128px;
+}
+.question_top .dropdown-content{
+    flex-direction: column;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+    padding: 24px;
+    top: 100%;
+  width: 90%;
+    z-index: 2;
+    gap: 12px; 
+    display: none;
+}
+
+.question_top .dropdown-content a{
+    text-decoration: none;
+    color: var(--primary-color-dark);
 }
 
 .question_tabs p {
@@ -389,7 +414,8 @@ align-items: center;
     background: var(--Primary-O, #FA7436);
     box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
     border: none;
-    color: #FFF;
+   color: #fff;
+   
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
@@ -402,6 +428,56 @@ align-items: center;
 }
 .fa-chevron-right{
     display: none;
+}
+.dropdown_btn_date {
+    background: no-repeat url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="%23FA7436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 10px;
+    height: 5px;
+    stroke-width: 2px;
+    background-size: contain;
+
+}
+.dropdown-date{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+    padding: 24px;
+    top: 100%;
+    right: -40%;
+    z-index: 1;
+    display: none;
+}
+.dropdown-date input{
+    border: none;
+}
+.dropdown-date input:focus-within{
+    outline: none;
+}
+.dropdown_btn_no {
+    background: no-repeat url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="%23FA7436" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    width: 10px;
+    height: 5px;
+    stroke-width: 2px;
+    background-size: contain;
+
+}
+.dropdown-num{
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+    padding: 24px;
+    top: 100%;
+    width: 100%;
+    z-index: 2;
+    gap: 12px; 
+    display: flex;
+}
+.dropdown-num input{
+    border: none;
+    width: 100%;
+}
+.dropdown-num input:focus-within{
+    outline: none;
 }
 
 /* Things you need to know section */
@@ -1772,16 +1848,16 @@ height: 24px;
         justify-content:center ;
         position: relative;
         
+        
+        
     }
     .question_container .links{
-     align-items: center;
+    
         width: 37%;
         justify-self: center;
         overflow: hidden;
-        height: 80px;
+        height:200px;
         gap: 5px;
-      
-       
     }
     .question_links{
         width: 100%;
@@ -1799,7 +1875,7 @@ height: 24px;
         display: flex;
         color: var(--primary-color);
         position: absolute;
-        top: 30%;
+        top: 38%;
         right: 20%;
         cursor: pointer;
         position: absolute;
@@ -1809,7 +1885,7 @@ height: 24px;
         display: flex;
         color: var(--primary-color);
         position: absolute;
-        top: 30%;
+        top: 38%;
         right: 78%;
         cursor: pointer;
     }
