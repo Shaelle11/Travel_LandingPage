@@ -415,7 +415,6 @@ align-items: center;
     box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
     border: none;
    color: #fff;
-   
     font-family: Poppins;
     font-size: 18px;
     font-style: normal;
@@ -440,10 +439,10 @@ align-items: center;
 .dropdown-date{
     position: absolute;
     background-color: #fff;
-    box-shadow: 0px 8px 16px 0px rgba(250, 116, 54, 0.16);
+ 
     padding: 24px;
     top: 100%;
-    right: -40%;
+ right: -40%;
     z-index: 1;
     display: none;
 }
