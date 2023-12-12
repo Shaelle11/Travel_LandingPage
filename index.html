@@ -28,7 +28,7 @@
           <img class="logo_img" src="./assets/Images/trabook_logo.png" alt="Trabook logo">
         </div>
        <div id="menuopen" class="burger">
-        <i id="burger-open" class="fa-solid fa-xmark"></i>
+        <i onclick="closeMenu()" id="burger-open" class="fa-solid fa-xmark"></i>
        </div>
         <ul class="nav__links">
 
@@ -100,28 +100,35 @@
       </div>
       </div>
     <div class="question_tabs">
-      <div class="question_links">
-        <div class="question_top">
-          <h1>Location</h1>
-          <img class="dropdown_btn" src="" alt="">
+     <div class="question_container">
+      <i id="prevButton" class="fa-solid fa-chevron-left"></i>
+      <div id="question-container" class="links">
+        <div class="question_links">
+          <div class="question_top">
+            <h1>Location</h1>
+            <img class="dropdown_btn" src="" alt="">
+          </div>
+          <p>Where are you going?</p>
         </div>
-        <p>Where are you going?</p>
-      </div>
-      <div>
-        <div class="question_top">
-          <h1>Date</h1>
-          <img class="dropdown_btn" src="" alt="">
+        <div class="question_links">
+          <div class="question_top">
+            <h1>Date</h1>
+            <img class="dropdown_btn" src="" alt="">
+          </div>
+          <p>When will you go?</p>
         </div>
-        <p>When will you go?</p>
+        <div class="question_links">
+          <div class="question_top">
+            <h1>Guest</h1>
+            <img class="dropdown_btn" src="" alt="">
+          </div>
+          <p>Number of Guests</p>
+       </div>
       </div>
-      <div>
-        <div class="question_top">
-          <h1>Guest</h1>
-          <img class="dropdown_btn" src="" alt="">
-        </div>
-        <p>Number of Guests</p>
+      <i id="nextButton" class="fa-solid fa-chevron-right"></i>
+     <button>Explore Now</button>
+
       </div>
-      <button>Explore Now</button>
     </div>
 
   <!-- Things you need Section -->
