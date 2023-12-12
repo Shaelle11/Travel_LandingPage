@@ -326,24 +326,35 @@ height: 530px;
     background-size: contain;
 
 }
-
-.question_tabs {
-    width: 841px;
-    height: 124px;
+.question_container{
+    width: 100%;
     border-radius: 10px;
-    background: #FFF;
     box-shadow: 0px 2px 80px 2px rgba(0, 0, 0, 0.06);
-    margin-inline: auto;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding: 24px;
+    justify-content: space-between;
+}
+.question_container .links{
+    display: flex;
+    width: 70%;
+    align-items: center;
+  justify-content: space-between;
+}
+.question_tabs {
+    display: flex;
+    padding: 120px 190px;
 }
 
+.question_links{
+    width: 25%;
+    height: auto;
+    align-items: start;
+    
+}
 .question_top {
-    display: flex;
-    text-align: center;
-    align-items: center;
+    width: 70%;
+display: flex;
+align-items: center;
     gap: 5px;
 }
 
@@ -354,6 +365,7 @@ height: 530px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    width: 128px;
 }
 
 .question_tabs p {
@@ -368,6 +380,7 @@ height: 530px;
 .question_tabs button {
     display: inline-flex;
     height: 60px;
+    width: 20%;
     padding: 14px 28px;
     justify-content: center;
     align-items: center;
@@ -382,6 +395,13 @@ height: 530px;
     font-style: normal;
     font-weight: 500;
     line-height: 32px;
+}
+
+.fa-chevron-left{
+    display: none;
+}
+.fa-chevron-right{
+    display: none;
 }
 
 /* Things you need to know section */
@@ -1734,10 +1754,63 @@ height: 24px;
         z-index: -1;
     }
 
-.hero__body .card{
+   .hero__body .card{
         display: none;
     }
     .hero_left span {
         color: #fff;
+    }
+.question_tabs{
+    padding: 0px;
+    align-items: center;
+}
+    .question_container{
+        display: grid;
+        gap: 12px;
+        align-items: center;
+        text-align: center;
+        justify-content:center ;
+        position: relative;
+        
+    }
+    .question_container .links{
+     align-items: center;
+        width: 37%;
+        justify-self: center;
+        overflow: hidden;
+        height: 80px;
+        gap: 5px;
+      
+       
+    }
+    .question_links{
+        width: 100%;
+        transition: transform 0.3s ease-out;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .question_tabs button{
+        width: 100%;
+    }
+    
+    .fa-chevron-right{
+        display: flex;
+        color: var(--primary-color);
+        position: absolute;
+        top: 30%;
+        right: 20%;
+        cursor: pointer;
+        position: absolute;
+    
+    }
+    .fa-chevron-left{
+        display: flex;
+        color: var(--primary-color);
+        position: absolute;
+        top: 30%;
+        right: 78%;
+        cursor: pointer;
     }
 }
