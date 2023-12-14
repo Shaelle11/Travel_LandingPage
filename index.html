@@ -1,155 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/fontawesome-free-6.5.1-web/css/fontawesome.css"
+    />
+    <script src="./assets/fontawesome-free-6.5.1-web/js/all.js"></script>
+    <title>Travel Agency</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="stylesheet" href="./assets/fontawesome-free-6.5.1-web/css/fontawesome.css">
-  <script src="./assets/fontawesome-free-6.5.1-web/js/all.js"></script>
-  <title>Travel Agency</title>
-</head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <h1 class="Trabook">Trabook</h1>
+          <img
+            class="logo_img"
+            src="./assets/Images/trabook_logo.png"
+            alt="Trabook logo"
+          />
+        </div>
+        <div class="burger">
+          <i
+            id="burger-close"
+            onclick="openMenu ()"
+            class="fa-solid fa-bars"
+          ></i>
+        </div>
+        <div id="the_menu" class="navigations">
+          <div class="burger_logo">
+            <h1 class="Trabook">Trabook</h1>
+            <img
+              class="logo_img"
+              src="./assets/Images/trabook_logo.png"
+              alt="Trabook logo"
+            />
+          </div>
+          <div id="menuopen" class="burger">
+            <i
+              onclick="closeMenu()"
+              id="burger-open"
+              class="fa-solid fa-xmark"
+            ></i>
+          </div>
+          <ul class="nav__links">
+            <li class="link">
+              <a href="">Home</a>
+            </li>
+            <li class="link">
+              <a href="">About</a>
+            </li>
+            <li class="link">
+              <a href="">Destination</a>
+            </li>
+            <li class="link">
+              <a href="">Tour</a>
+            </li>
+            <li class="link">
+              <a href="">Blog</a>
+            </li>
+          </ul>
 
-<body>
-  <header>
-    <nav>
-      <div class="logo">
-        <h1 class="Trabook">Trabook
-        </h1>
-        <img class="logo_img" src="./assets/Images/trabook_logo.png" alt="Trabook logo">
-      </div>
-      <div class="burger">
-        <i id="burger-close" onclick="openMenu ()" class=" fa-solid fa-bars"></i>
-       </div>
-      <div id="the_menu" class="navigations">
-        <div class="burger_logo">
-          <h1 class="Trabook">Trabook
+          <ul class="nav__links__right">
+            <li class="link">
+              <a href="">Login</a>
+            </li>
+            <li class="btn">
+              <a href="">Signup</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <section class="hero__body">
+      <div class="section__container hero_container">
+        <img
+          class="smiling_man_res"
+          src="./assets/Images/tourist-with-thumb-up__1_-removebg 1.svg"
+          alt="toursit with thumbs up"
+        />
+        <div class="overlay"></div>
+        <div class="hero_left">
+          <h1>
+            Get started your exciting
+            <span>journey</span> with us.
           </h1>
-          <img class="logo_img" src="./assets/Images/trabook_logo.png" alt="Trabook logo">
+          <p>
+            A Team of experienced tourism professionals will provide you with
+            the best advice and tips for your desire place.
+          </p>
+          <button class="btn">Discover Now</button>
         </div>
-       <div id="menuopen" class="burger">
-        <i onclick="closeMenu()" id="burger-open" class="fa-solid fa-xmark"></i>
-       </div>
-        <ul class="nav__links">
 
-          <li class="link">
-            <a href="">Home</a>
-          </li>
-          <li class="link">
-            <a href="">About</a>
-          </li>
-          <li class="link">
-            <a href="">Destination</a>
-          </li>
-          <li class="link">
-            <a href="">Tour</a>
-          </li>
-          <li class="link">
-            <a href="">Blog</a>
-          </li>
-        </ul>
-  
-        <ul class="nav__links__right">
-          <li class="link">
-            <a href="">Login</a>
-          </li>
-          <li class="btn">
-            <a href="">Signup</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-    <div class="hero__body">
-      <div class="overlay"></div>
-      <div class="hero_left">
-        <h1>
-          Get started your exciting
-          <span>journey</span> with us.
-
-        </h1>
-        <p>
-          A Team of experienced tourism professionals will provide you with the best advice and tips for your desire
-          place.
-        </p>
-        <button class="btn">
-          Discover Now
-        </button>
-      </div>
-      <img class="smiling_man" src="./assets/Images/tourist-with-thumb-up__1_-removebg 1.svg" alt="toursit with thumbs up">
-      <div class="card top">
-        <img src="./assets/Images/trophy-removebg-preview 1.png" alt="trophy image">
-        <h1>Best Tour awards
-        </h1>
-      </div>
-      <div class="card middle">
-        <img src="./assets/Images/google-maps 1.png" alt="location image">
-        <div class="text">
-          <h1>Explore</h1>
-          <p>Every corner of the world with us</p>
-        </div>
-      </div>
-      <div class="card bottom">
-        <img src="./assets/Images/star 1.png" alt="star">
-        <div class="text">
-          <h1>27K</h1>
-          <p>Customer Reviewed</p>
-        </div>
-        <div class="img_background"></div>
-        <div class="flying_planes"></div>
-      </div>
-      </div>
-    <div class="question_tabs">
-     <div class="question_container">
-      <i id="prevButton" class="fa-solid fa-chevron-left"></i>
-      <div id="question-container" class="links">
-        <div class="question_links">
-          <div class="question_top">
-              <a class="heading">Locations
-                 <img onclick="dropdownLocation()" class="dropdown_btn" src="" alt=""></a>
-              <div class="dropdown-content">
-              <a href="#">London</a>
-           
-              <a href="#">Osaka</a>
-              
-              <a href="#">Italy</a>
-              </div>
-           
+        <div class="img_background">
+          <img
+            class="smiling_man"
+            src="./assets/Images/tourist-with-thumb-up__1_-removebg 1.svg"
+            alt="toursit with thumbs up"
+          />
+          <div class="card top">
+            <img
+              src="./assets/Images/trophy-removebg-preview 1.png"
+              alt="trophy image"
+            />
+            <h1>Best Tour awards</h1>
           </div>
-          <p>Where are you going?</p>
-        </div>
-        
-          <div class="question_links">
-            <div class="question_top">
-                <a class="heading">Date
-                   <img onclick="dropDate()" class="dropdown_btn_date" src="" alt=""></a>
-                <div class="dropdown-date">
-                  <input type="date" name="date" id="date">
-                </div>
-             
+          <div class="card middle">
+            <img src="./assets/Images/google-maps 1.png" alt="location image" />
+            <div class="text">
+              <h1>Explore</h1>
+              <p>Every corner of the world with us</p>
             </div>
-          <p>When will you go?</p>
-        </div>
-        <div class="question_links">
-        <div class="question_top">
-          <a class="heading">Guests
-             <img onclick="Numbercount()" class="dropdown_btn_no" src="" alt=""></a>
-          <div class="dropdown-num">
-            <input placeholder="Guest No" type="number" id="quantity" name="quantity" min="1" max="5">
           </div>
-       
+          <div class="card bottom">
+            <img src="./assets/Images/star 1.png" alt="star" />
+            <div class="text">
+              <h1>27K</h1>
+              <p>Customer Reviewed</p>
+            </div>
+          </div>
+          <div class="flying_planes"></div>
+        </div>
       </div>
-          <p>Number of Guests</p>
-       </div>
-      </div>
-      <i id="nextButton" class="fa-solid fa-chevron-right"></i>
-     <button>Explore Now</button>
+    </section>
 
-      </div>
-    </div>
+    <section class="question_tabs">
+        <div class="section__container question_container">
+          <div class="content_container">
+            <i id="prevButton" class="fa-solid fa-chevron-left"></i>
+          <div id="question-container" class="links">
+            <div class="question_links">
+              <div class="question_top">
+                <a class="heading"
+                  >Locations
+                  <img
+                    onclick="dropdownLocation()"
+                    class="dropdown_btn"
+                    src=""
+                    alt=""
+                /></a>
+                <div class="dropdown-content">
+                  <a href="#">London</a>
 
-  <!-- Things you need Section -->
-  <div class="Things_you_need">
+                  <a href="#">Osaka</a>
+
+                  <a href="#">Italy</a>
+                </div>
+              </div>
+              <p>Where are you going?</p>
+            </div>
+
+            <div class="question_links">
+              <div class="question_top">
+                <a class="heading"
+                  >Date
+                  <img
+                    onclick="dropDate()"
+                    class="dropdown_btn_date"
+                    src=""
+                    alt=""
+                /></a>
+                <div class="dropdown-date">
+                  <input type="date" name="date" id="date" />
+                </div>
+              </div>
+              <p>When will you go?</p>
+            </div>
+            <div class="question_links">
+              <div class="question_top">
+                <a class="heading"
+                  >Guests
+                  <img
+                    onclick="Numbercount()"
+                    class="dropdown_btn_no"
+                    src=""
+                    alt=""
+                /></a>
+                <div class="dropdown-num">
+                  <input
+                    placeholder="Guest No"
+                    type="number"
+                    id="quantity"
+                    name="quantity"
+                    min="1"
+                    max="5"
+                  />
+                </div>
+              </div>
+              <p>Number of Guests</p>
+            </div>
+          </div>
+          <i id="nextButton" class="fa-solid fa-chevron-right"></i>
+          <button>Explore Now</button>
+        </div>
+    </section>
+
+    <!-- <section class="thing__container">
+      <div class="section__container hi__container">
+        <div class="things__to__know">
+          <div class="things__text">
+            <h1>Things you need <span class="orange">to do</span></h1>
+            <p>
+              We ensure that you’ll embark on a perfectly planned, safe vacation
+              at a price you can afford.
+            </p>
+          </div>
+          <img src="/assets/Images/2plane_vector.png" alt="" />
+        </div>
+
+        <div class="things__cards">
+          <div class="things_card">
+            <img src="./assets/Images/Signup.png" alt="signup img" />
+            <div>
+              <h1>Sign Up</h1>
+              <p>
+                Completes all the work associated with planning and processing
+              </p>
+            </div>
+          </div>
+
+          <div class="things_card">
+            <img src="./assets/Images/Worth_ofmoney.png" alt="signup img" />
+            <div>
+              <h1>Worth of Money</h1>
+              <p>
+                Completes all the work associated with planning and processing
+              </p>
+            </div>
+          </div>
+
+          <div class="things_card">
+            <img src="./assets/Images/Exciting_Travel.png" alt="signup img" />
+            <div>
+              <h1>Sign Up</h1>
+              <p>
+                Completes all the work associated with planning and processing
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+          </div>
+    </section> -->
+
+    <!-- Things you need Section -->
+    <section class="Things_you_need">  
+   <div class="section__container thing_container">
     <div class="Things_top">
       <div class="Things_text">
         <h1>Things you need <span>to do</span></h1>
@@ -249,9 +348,12 @@
         </div>
       </div>
     </div>
-  </div>
-  <!-- Exclusive deals Section -->
-  <div class="Exclusive_deals">
+   </div>
+   </div>
+  </section>
+
+    <!-- Exclusive deals Section -->
+    <!-- <div class="Exclusive_deals">
     <div class="Exclusive_texts">
       <h1>Exclusive <span>deals & discounts</span></h1>
       <p>Discover our fantastic early booking discounts & start planning your journey.</p>
@@ -358,10 +460,10 @@
       <button class="left"><i class="fa-solid fa-arrow-left"></i></button>
       <button class="right"><i class="fa-solid fa-arrow-right"></i></button>
     </div>
-  </div>
+  </div> -->
 
-  <!-- Best Vacation Plan Section -->
-  <div class="best_vacation_plan">
+    <!-- Best Vacation Plan Section -->
+    <!-- <div class="best_vacation_plan">
     <div class="best_plan_texts">
       <div class="Texts">
         <h1>Best <span>Vacation Plan</span></h1>
@@ -429,11 +531,11 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <!-- What People Say Section -->
+    <!-- What People Say Section -->
 
-
+    <!-- 
   <div class="what_people_say">
     <div class="what_people_left">
       <div class="text">
@@ -502,8 +604,8 @@
       <div class="button active"></div>
       <div class="button"></div>
     </div>
-  </div>
-  <footer class="footer">
+  </div> -->
+    <!-- <footer class="footer">
     <div class="subscribe">
       <div class="subscribe_center">
         <div>
@@ -553,7 +655,7 @@
         <div class="company">
           <h1>Company</h1>
           <ul>
-             <a href="">
+            <a href="">
               <li>About</li>
             </a>
             <a href="">
@@ -569,7 +671,7 @@
         </div>
         <div class="contacts">
           <h1>Contacts</h1>
-          <ul> 
+          <ul>
             <a href="">
               <li>Help/FAQ</li>
             </a>
@@ -579,14 +681,14 @@
             <a href="">
               <li>Affliates</li>
             </a>
-          
-          </ul>
-          
-        </div>
+
+          </ul> -->
+
+    <!-- </div>
         <div class="more">
           <h1>More</h1>
           <ul>
-             <a href="">
+            <a href="">
               <li>Press Centre</li>
             </a>
             <a href="">
@@ -604,9 +706,7 @@
       <p>Copyright, Trabook 2022. All rights reserved.</p>
       <p>Terms & Conditions</p>
     </div>
-  </footer>
-  <script src="./index.js">
-  </script>
-</body>
-
+  </footer> -->
+    <script src="./index.js"></script>
+  </body>
 </html>
