@@ -138,6 +138,8 @@ window.onload = function () {
 //         slides[slidePosition - 1].style.display = "flex";
 //       }
 
+// 
+
 const slidePositions = {};
 
 function slideShow(containerId, n) {
@@ -145,7 +147,25 @@ function slideShow(containerId, n) {
     return; // Do nothing if screen size is larger than 900px
   }
 
-  let slides = document.getElementById(containerId).getElementsByClassName(containerId === "thingsCard" ? "things_card" : "Exclusive_card");
+  // Adjust the class name based on the position in the list of class names
+  let className = "";
+  switch (containerId) {
+    case "thingsCard":
+      className = "things_card";
+      break;
+    case "exclusive-container":
+      className = "Exclusive_card";
+      break;
+    case "best-cards":
+      className = "bestcard";
+      break;
+    // Add cases for other container IDs if needed
+
+    default:
+      break;
+  }
+
+  let slides = document.getElementById(containerId).getElementsByClassName(className);
 
   // Use modulo to loop back to the start or end
   slidePositions[containerId] = (n + slides.length - 1) % slides.length + 1;
@@ -161,6 +181,9 @@ slideShow("thingsCard", 1); // Initial setup for thingscard
 
 // Example usage for the "exclusive-container" container
 slideShow("exclusive-container", 1); // Initial setup for exclusive-container
+
+// Example usage for the "best card" container
+slideShow("best-cards", 1); 
 
 // Unique onclick functions for buttons in the "thingscard" container
 function thingscardPlusSlides(n) {
@@ -178,4 +201,25 @@ function exclusiveContainerPlusSlides(n) {
 
 function exclusiveContainerCurrentSlide(n) {
   slideShow("exclusive-container", n);
+}
+
+// Unique onclick functions for buttons in the "best card" container
+function bestcardPlusSlides(n) {
+  slideShow("best-cards", slidePositions["best-cards"] + n);
+}
+
+function bestcardCurrentSlide(n) {
+  slideShow("best-cards", n);
+}
+
+// Add more containers and corresponding class names as needed
+// Example usage for another container
+slideShow("another-container", 1);
+
+function anotherContainerPlusSlides(n) {
+  slideShow("another-container", slidePositions["another-container"] + n);
+}
+
+function anotherContainerCurrentSlide(n) {
+  slideShow("another-container", n);
 }
