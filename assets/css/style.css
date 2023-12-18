@@ -531,7 +531,7 @@ gap: 16px;
   
 }
 .things__cards .card2{
-  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="370" height="278" viewBox="0 0 370 278" fill="none"><path d="M2 277C11 256 138 282 211 180.5C284 79 277.5 9.5 369 2.5" stroke="%23FFF8F5" stroke-width="4"/></svg>');
+  background-image: url('/assets/Images/worth_stroke.png');
  
 }
 .things__cards .card3{
@@ -542,9 +542,10 @@ gap: 16px;
 }
 
 /* Exclusive Deals Section */
-
-.exclusive__container{
+.Exclusiive_deals{
   background: var(--background-color-white);
+}
+.exclusive__container{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -597,8 +598,6 @@ gap: 16px;
   flex-shrink: 0;
  
 }
-
-
 
 .Exclusive_card {
   display: flex;
@@ -891,10 +890,12 @@ gap: 16px;
 /* Best Vacation Plan Section */
 .best_vacation_plan {
   background: var(--background-color-white);
+  
+}
+.best_vacationcontainer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 120px;
   gap: 48px;
 }
 
@@ -902,6 +903,7 @@ gap: 16px;
   display: flex;
   align-items: center;
   gap: 75px;
+  flex-wrap: wrap;
 }
 
 .best_plan_texts .Texts {
@@ -909,6 +911,7 @@ gap: 16px;
   align-items: center;
   text-align: center;
   gap: 24px;
+  flex-wrap: wrap; 
 }
 
 .best_plan_texts .Texts h1 {
@@ -930,7 +933,7 @@ gap: 16px;
 }
 
 .best_plan_texts .Texts p {
-  width: 521px;
+  max-width: 521px;
   color: var(--text-color-grey);
   text-align: center;
   font-family: Poppins;
@@ -974,14 +977,18 @@ gap: 16px;
 
 .best_plan_cards {
   display: flex;
-  gap: 28px;
+  width: 100%;
+  justify-content: space-between;
+  flex-shrink: 0;
+  align-items: center;
+  
 }
 
 .best_plan_card1 {
   border-radius: 8px;
   border: 2px solid rgba(102, 102, 102, 0.08);
   background: #fefcfb;
-  background: url(/assets/Images/Rome_italy.png);
+  background: url(/assets/Images/rome_italy.svg);
   background-repeat: no-repeat;
   background-position: top;
   width: 370px;
@@ -1022,6 +1029,7 @@ gap: 16px;
 .best_card_texts {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .best_card_texts .locations {
@@ -1069,6 +1077,7 @@ gap: 16px;
   height: 16px;
   border-radius: 10px;
 }
+
 
 /* What People Say Section */
 
@@ -1874,5 +1883,23 @@ align-items: center;
  margin-inline: auto;
 }
 
+/* Respnsive Best card Section */
+.best_vacationcontainer{
+  padding: 0px;
+}
+.best_plan_texts{
+justify-content: center;
+}
+.best_plan_texts img{
+  display: none;
+}
+.best_plan_cards{
+  width: 100%;
+  overflow: hidden;
+
+}
+.bestcard{
+ margin-inline: auto;
+}
 }
 
