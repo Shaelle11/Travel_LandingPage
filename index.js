@@ -106,5 +106,76 @@ window.onload = function () {
       }
 
 
+     
+// var slidePosition = 1;
+//       slideShow(slidePosition);
       
-    
+//       // forward/Back controls
+//       function plusSlides(n) {
+//         slideShow(slidePosition += n);
+//       }
+      
+//       // images controls
+//       function currentSlide(n) {
+//          if (window.innerWidth <= 900) {
+//            slideShow(n);
+//          }
+//       }
+      
+//       function slideShow(n) {
+//         if (window.innerWidth > 900) {
+//           return; // Do nothing if screen size is larger than 900px
+//         }
+      
+//         let slides = document.getElementsByClassName("Exclusive_card");
+        
+//         // Use modulo to loop back to the start or end
+//         slidePosition = (n + slides.length - 1) % slides.length + 1;
+        
+//         for (let i = 0; i < slides.length; i++) {
+//           slides[i].style.display = "none";
+//         }
+//         slides[slidePosition - 1].style.display = "flex";
+//       }
+
+const slidePositions = {};
+
+function slideShow(containerId, n) {
+  if (window.innerWidth > 900) {
+    return; // Do nothing if screen size is larger than 900px
+  }
+
+  let slides = document.getElementById(containerId).getElementsByClassName(containerId === "thingsCard" ? "things_card" : "Exclusive_card");
+
+  // Use modulo to loop back to the start or end
+  slidePositions[containerId] = (n + slides.length - 1) % slides.length + 1;
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slides[slidePositions[containerId] - 1].style.display = "block"; // or use "flex" if that's your desired layout
+}
+
+// Example usage for the "thingscard" container
+slideShow("thingsCard", 1); // Initial setup for thingscard
+
+// Example usage for the "exclusive-container" container
+slideShow("exclusive-container", 1); // Initial setup for exclusive-container
+
+// Unique onclick functions for buttons in the "thingscard" container
+function thingscardPlusSlides(n) {
+  slideShow("thingsCard", slidePositions["thingsCard"] + n);
+}
+
+function thingscardCurrentSlide(n) {
+  slideShow("thingsCard", n);
+}
+
+// Unique onclick functions for buttons in the "exclusive-container" container
+function exclusiveContainerPlusSlides(n) {
+  slideShow("exclusive-container", slidePositions["exclusive-container"] + n);
+}
+
+function exclusiveContainerCurrentSlide(n) {
+  slideShow("exclusive-container", n);
+}

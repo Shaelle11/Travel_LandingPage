@@ -460,7 +460,6 @@ width: 20px;
   outline: none;
 }
 
-/* Things you need to know section */
 
 /* things you need to know section */
 
@@ -501,17 +500,17 @@ width: 20px;
   margin-top: 2rem;
   display: flex;
  width: 100%;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-between;
+flex-shrink: 0;
   cursor: pointer;
 align-items: center;
 }
 
 .things_card {
-  margin: 30px 30px 0px 0px;
   background-color: #fff;
     width: 350px;
     height: 270px;
+    flex-shrink: 0;
     cursor: pointer;
   padding: 40px;
   box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.10);
@@ -538,20 +537,23 @@ gap: 16px;
 .things__cards .card3{
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="370" height="278" viewBox="0 0 370 278" fill="none"><path d="M2 277C11 256 138 282 211 180.5C284 79 277.5 9.5 369 2.5" stroke="%23FFF8F5" stroke-width="4"/></svg>');
 }
+.thingsnext{
+  display: none;
+}
 
 /* Exclusive Deals Section */
 
-.Exclusive_deals {
+.exclusive__container{
   background: var(--background-color-white);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 120px;
   gap: 48px;
 }
 
 .Exclusive_texts {
   display: grid;
+  width: 100%;
   align-items: center;
   gap: 24px;
   text-align: center;
@@ -564,6 +566,7 @@ gap: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 54px;
+  width: 100%;
 }
 
 .Exclusive_texts h1 span {
@@ -583,31 +586,42 @@ gap: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
-  width: 433px;
+  max-width: 433px;
   margin-inline: auto;
 }
 
 .Exclusive_cards {
   display: flex;
-  gap: 28px;
+  width: 100%;
+  justify-content: space-between;
+  flex-shrink: 0;
+ 
 }
 
+
+
 .Exclusive_card {
-  display: grid;
-  width: 270px;
+  display: flex;
   height: 426px;
   flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.border_line{
+  display: grid;
+  flex-shrink: 0;
+  width: 270px;
+  height: 426px;
   border-radius: 8px;
   border: 2px solid rgba(102, 102, 102, 0.08);
   background: #fefcfb;
-  gap: 16px;
+  gap: 16px; 
 }
-
 .Exclusive_card .Card_Img1 {
   width: 270px;
   height: 290px;
-  flex-shrink: 0;
-  background: url(/assets/Images/Madrid.png);
   position: relative;
 }
 
@@ -632,11 +646,11 @@ gap: 16px;
   height: 50px;
 }
 
+
 .Exclusive_card .Card_Img2 {
   width: 270px;
   height: 290px;
   flex-shrink: 0;
-  background: url(/assets/Images/firenze.png);
   position: relative;
 }
 
@@ -665,8 +679,7 @@ gap: 16px;
   width: 270px;
   height: 290px;
   flex-shrink: 0;
-  background: url(/assets/Images/Paris.png);
-  position: relative;
+ position: relative;
 }
 
 .Exclusive_card .Card_Img3 button {
@@ -694,7 +707,6 @@ gap: 16px;
   width: 270px;
   height: 290px;
   flex-shrink: 0;
-  background: url(/assets/Images/London.png);
   position: relative;
 }
 
@@ -1746,7 +1758,7 @@ height: auto;
  overflow: hidden;
   }
   .question_links {
-    width: 100%;
+    width: 97%;
     transition: transform 0.3s ease-out;
     display: flex;
     flex-direction: column;
@@ -1793,52 +1805,74 @@ height: auto;
  .things__cards{
   align-items: center;
   justify-content: center;
-  height: 250px;
-  overflow-y: scroll;
+  flex-direction: column;
+  width: 100%;
+overflow: hidden;
  position: relative;
-
  padding: 0px;
-
  }
+ 
 
  .things_card{
+width: 100%;
+ }
+ .thingsnext{
+  width: 50px;
+  height: 25px;
+  right: 5%;
+  transform: translateY(100%);
+}
 
-height: 100%;
-align-self: center;
-transform: translateY(0); 
-transition: transform 0.3s ease-in-out;
- }
- .card1{
-  margin-right: 30px;
- }
+/* Define the animation */
+@keyframes slideUpAnimation {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 
- .card_navbtn_next{
-  display: flex;
-  color: var(--primary-color);
-  position: absolute;
- top: 50%;
- right: 0%;
-  width: 20px;
-  cursor: pointer;
- height: 20px;
-  background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.10);
-  padding: 5px;
+/* Apply the animation to the text element */
+.things__cards:hover+.slideUpAnimation {
+  animation: slideUpAnimation 0.5s ease-in-out; /* Adjust the duration and timing function as needed */
+}
+
+ /* Exclusive Deals Sections */
+
+ .Exclusive_cards{
+width: 100%;
+overflow: hidden;
+align-items: center;
+
  }
- .fa-chevron-left.card_navbtn_prev{
-  display: flex;
-  color: var(--primary-color);
-  position: absolute;
-  top: 60%;
-  left: 0%;
-  width: 20px;
-  cursor: pointer;
- height: 20px;
-  background-color: #fff;
-  border-radius: 30px;
-  box-shadow: 14px 24px 72px 0px rgba(102, 102, 102, 0.10);
-  padding: 5px;
+ .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.4s;
+  animation-name: fade;
+  animation-duration: 1.4s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+@keyframes fade {
+  from {opacity: .5}
+  to {opacity: 2}
+}
+
+ .Exclusive_card{
+  /* display: none; */
+ width: 100%;
+ flex-shrink: 0;
+
+
  }
+.border_line{
+ margin-inline: auto;
+}
+
 }
 
