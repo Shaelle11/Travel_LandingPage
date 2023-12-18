@@ -230,7 +230,7 @@
             <div>
               <h1>Worth of Money</h1>
               <p>
-                Completes all the work associated with planning and processing
+               After successful access then book from exciting deals and offers
               </p>
             </div>
           </div>
@@ -238,12 +238,13 @@
           <div class="things_card card3">
             <img src="./assets/Images/Exciting_Travel.png" alt="signup img" />
             <div>
-              <h1>Sign Up</h1>
+              <h1>Exciting Travel</h1>
               <p>
-                Completes all the work associated with planning and processing
+                Start exploring a awide range of travel experiences.
               </p>
             </div>
           </div>
+          <i onclick="thingscardPlusSlides(1)" id="nextButton" class="fa-solid fa-chevron-right thingsnext slideUpAnimation"></i>
         </div>
       </div>
           </div>
@@ -252,115 +253,129 @@
 
     <!-- Exclusive deals Section -->
 
-    
-    <div class="Exclusive_deals">
-    <div class="Exclusive_texts">
-      <h1>Exclusive <span>deals & discounts</span></h1>
-      <p>Discover our fantastic early booking discounts & start planning your journey.</p>
-    </div>
-    <div class="Exclusive_cards">
-      <div class="Exclusive_card">
-        <div class="Card_Img1">
-          <button id="popup-button">Book Now</button>
+
+     <section class="Exclusive_deals">
+      <div class="section__container exclusive__container">
+        <div class="Exclusive_texts">
+          <h1>Exclusive <span>deals & discounts</span></h1>
+          <p>Discover our fantastic early booking discounts & start planning your journey.</p>
         </div>
-        <div class="Card_Text">
-          <div class="locations">
-            <h1>Madrid</h1>
-            <div class="gps_container">
-              <img src="./assets/Images/gps_vector.png" alt="location vector">
-              <p>Spain</p>
+        <div id="exclusive-container"  class="Exclusive_cards fade">
+          <div class="Exclusive_card">
+            <div class="border_line">
+              <div class="Card_Img1">
+                <img src="./assets/Images/Madrid.png" alt="Madrid Image">
+                <button id="popup-button">Book Now</button>
+              </div>
+              <div class="Card_Text">
+                <div class="locations">
+                  <h1>Madrid</h1>
+                  <div class="gps_container">
+                    <img src="./assets/Images/gps_vector.png" alt="location vector">
+                    <p>Spain</p>
+                  </div>
+                </div>
+                <div class="Ratings">
+                  <div class="Rates">
+                    <img src="./assets/Images/star 1.png" alt="rating star">
+                    <p>4.8</p>
+                  </div>
+                  <div class="Prices">
+                    <s>$950</s>
+                    <p>$850</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="Ratings">
-            <div class="Rates">
-              <img src="./assets/Images/star 1.png" alt="rating star">
-              <p>4.8</p>
-            </div>
-            <div class="Prices">
-              <s>$950</s>
-              <p>$850</p>
+          <div class="Exclusive_card">
+            <div class="border_line">
+              <div class="Card_Img2">
+                <img src="./assets/Images/firenze.png" alt="Firenze Image">
+                <button id="popup-button">Book Now</button>
+              </div>
+              <div class="Card_Text">
+                <div class="locations">
+                  <h1>Firenze</h1>
+                  <div class="gps_container">
+                    <img src="./assets/Images/gps_vector.png" alt="location vector">
+                    <p>Italy</p>
+                  </div>
+                </div>
+                <div class="Ratings">
+                  <div class="Rates">
+                    <img src="./assets/Images/star 1.png" alt="rating star">
+                    <p>4.5</p>
+                  </div>
+                  <div class="Prices">
+                    <s>$850</s>
+                    <p>$750</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+          <div class="Exclusive_card">
+            <div class="border_line">
+              <div class="Card_Img3">
+                <img src="./assets/Images/Paris.png" alt="Paris Image">
+                <button id="popup-button">Book Now</button>
+              </div>
+              <div class="Card_Text">
+                <div class="locations">
+                  <h1>Paris</h1>
+                  <div class="gps_container">
+                    <img src="./assets/Images/gps_vector.png" alt="location vector">
+                    <p>France</p>
+                  </div>
+                </div>
+                <div class="Ratings">
+                  <div class="Rates">
+                    <img src="./assets/Images/star 1.png" alt="rating star">
+                    <p>4.4</p>
+                  </div>
+                  <div class="Prices">
+                    <s>$699</s>
+                    <p>$599</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Exclusive_card">
+            <div class="border_line">
+              <div class="Card_Img4">
+                <img src="./assets/Images/London.png" alt="London Image">
+                <button id="popup-button">Book Now</button>
+              </div>
+              <div class="Card_Text">
+                <div class="locations">
+                  <h1>London</h1>
+                  <div class="gps_container">
+                    <img src="./assets/Images/gps_vector.png" alt="location vector">
+                    <p>UK</p>
+                  </div>
+                </div>
+                <div class="Ratings">
+                  <div class="Rates">
+                    <img src="./assets/Images/star 1.png" alt="rating star">
+                    <p>4.8</p>
+                  </div>
+                  <div class="Prices">
+                    <s>$950</s>
+                    <p>$850</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Exclusive-btns">
+          <button id="exclusive-prevbtn" class="left"><i onclick="exclusiveContainerPlusSlides(-1)" class="fa-solid fa-arrow-left"></i></button>
+          <button onclick="exclusiveContainerPlusSlides(1)" id="exclusive-nextbtn" class="right"><i class="fa-solid fa-arrow-right"></i></button>
         </div>
       </div>
-      <div class="Exclusive_card">
-        <div class="Card_Img2">
-          <button id="popup-button">Book Now</button>
-        </div>
-        <div class="Card_Text">
-          <div class="locations">
-            <h1>Firenze</h1>
-            <div class="gps_container">
-              <img src="./assets/Images/gps_vector.png" alt="location vector">
-              <p>Italy</p>
-            </div>
-          </div>
-          <div class="Ratings">
-            <div class="Rates">
-              <img src="./assets/Images/star 1.png" alt="rating star">
-              <p>4.5</p>
-            </div>
-            <div class="Prices">
-              <s>$850</s>
-              <p>$750</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Exclusive_card">
-        <div class="Card_Img3">
-          <button id="popup-button">Book Now</button>
-        </div>
-        <div class="Card_Text">
-          <div class="locations">
-            <h1>Paris</h1>
-            <div class="gps_container">
-              <img src="./assets/Images/gps_vector.png" alt="location vector">
-              <p>France</p>
-            </div>
-          </div>
-          <div class="Ratings">
-            <div class="Rates">
-              <img src="./assets/Images/star 1.png" alt="rating star">
-              <p>4.4</p>
-            </div>
-            <div class="Prices">
-              <s>$699</s>
-              <p>$599</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="Exclusive_card">
-        <div class="Card_Img4">
-          <button id="popup-button">Book Now</button>
-        </div>
-        <div class="Card_Text">
-          <div class="locations">
-            <h1>London</h1>
-            <div class="gps_container">
-              <img src="./assets/Images/gps_vector.png" alt="location vector">
-              <p>UK</p>
-            </div>
-          </div>
-          <div class="Ratings">
-            <div class="Rates">
-              <img src="./assets/Images/star 1.png" alt="rating star">
-              <p>4.8</p>
-            </div>
-            <div class="Prices">
-              <s>$950</s>
-              <p>$850</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="Exclusive-btns">
-      <button class="left"><i class="fa-solid fa-arrow-left"></i></button>
-      <button class="right"><i class="fa-solid fa-arrow-right"></i></button>
-    </div>
-  </div> -->
+     </section>
 
     <!-- Best Vacation Plan Section -->
     <!-- <div class="best_vacation_plan">
