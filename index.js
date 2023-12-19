@@ -269,3 +269,15 @@ function flipShow(n) {
     flipcards[flipPosition[i]-1].classList.toggle("card2");
   
   }
+
+
+const list = document.getElementById('Blog-cards')
+const itemWidth = 120
+const padding = 30
+
+function forwardBlog(){
+  list.scrollLeft -= (itemWidth + padding)
+}
+function backwardBlog(){
+  list.scrollLeft += (itemWidth + padding)
+}
