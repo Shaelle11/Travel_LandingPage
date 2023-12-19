@@ -1929,12 +1929,13 @@ justify-content: center;
 .what_peoplecontainer{
   width: 100%;
   justify-content: center;
+  padding: 1rem;
 }
 .stacks{
   justify-content: center;
 }
 .stack{
-margin-top: 25px;
+margin-top: 3rem;
   width: 100%;
   height: auto;
  
