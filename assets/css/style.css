@@ -504,6 +504,7 @@ width: 20px;
 flex-shrink: 0;
   cursor: pointer;
 align-items: center;
+overflow: hidden;
 }
 
 .things_card {
@@ -596,6 +597,7 @@ gap: 16px;
   width: 100%;
   justify-content: space-between;
   flex-shrink: 0;
+  overflow: hidden;
  
 }
 
@@ -981,6 +983,7 @@ gap: 16px;
   justify-content: space-between;
   flex-shrink: 0;
   align-items: center;
+  overflow: hidden;
   
 }
 
@@ -1082,22 +1085,30 @@ gap: 16px;
 /* What People Say Section */
 
 .what_people_say {
-  display: flex;
   background: var(--background-color-bluegrey);
-  align-items: center;
-  padding: 176px 60px;
-  gap: 126px;
+ 
+}
+.what_peoplecontainer{
+  
+  display: flex;
+
+  flex-wrap: wrap;
+ margin-inline:auto;
+ text-align: center;
 }
 
 .what_people_left {
+  max-width: 388px;
   display: grid;
   gap: 2rem;
-  width: 388px;
+  align-items: center;
+ 
 }
 
 .what_people_left .text {
   display: grid;
   gap: 24px;
+  text-align: start;
 }
 
 .what_people_left .text h1 {
@@ -1162,26 +1173,36 @@ gap: 16px;
 .what_people_right {
   display: flex;
   position: relative;
+  margin-inline: auto;
+  flex-wrap: wrap;
 }
 
-.what_people_right .stacks_container {
-  perspective: 1000px;
-}
+
 
 .stacks_container .stacks {
   position: relative;
-  width: 504px;
-  height: 245px;
+  height: 350px;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+  
+}
+.stacks .card2{
+bottom: 13%;
+top: 40%;
+}
+.stacks .card1{
+  bottom: 20%;
+ background-color: #fff;
+ z-index: 1;
+ 
 }
 
-.stacks .card:nth-child(1) {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  right: 8%;
-  top: 1%;
+ .stack{
+position: sticky;
+  width: 504px;
+    height: 245px;
   border-radius: 10px;
-  background-color: #fff;
+  background-color: var(--background-color-bluegrey);
   box-shadow: 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0),
     0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01),
     0px 20px 13px 0px rgba(0, 0, 0, 0.01),
@@ -1189,27 +1210,16 @@ gap: 16px;
     0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02),
     0px 100px 80px 0px rgba(0, 0, 0, 0.02);
   cursor: pointer;
-  z-index: 1;
-}
-
-.stacks .card {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 34.2%;
-  margin-right: 10px;
-  border-radius: 10px;
-  background-color: var(--background-color-bluegrey);
-  border: 2px solid rgba(102, 102, 102, 0.08);
-  box-shadow: 0px 10px 30px 0px rgba(34, 34, 34, 0.35);
-  cursor: pointer;
-  padding: 28px 34px;
+    padding: 28px 34px;
   flex-direction: column;
   display: flex;
   align-items: flex-start;
-}
+	transition: all .4s ease, max-height .75s ease;
+  text-align: start;
+  
+} 
 
-.stacks .card p {
+.stacks .stack p {
   width: 402px;
   color: var(--text-color-dark);
   font-family: Poppins;
@@ -1220,7 +1230,7 @@ gap: 16px;
   opacity: 0.5;
 }
 
-.stacks .card h1 {
+.stacks .stack h1 {
   width: 100%;
   color: var(--text-color);
   font-family: Poppins;
@@ -1231,7 +1241,7 @@ gap: 16px;
   opacity: 0.5;
 }
 
-.stacks .card span {
+.stacks .stack span {
   color: var(--text-color-grey);
   font-family: Poppins;
   font-size: 14px;
@@ -1240,20 +1250,7 @@ gap: 16px;
   line-height: normal;
   opacity: 0.5;
 }
-
-.stacks .card:nth-child(1) p {
-  opacity: 1;
-}
-
-.stacks .card:nth-child(1) h1 {
-  opacity: 1;
-}
-
-.stacks .card:nth-child(1) span {
-  opacity: 1;
-}
-
-.stacks .card:nth-child(1) img {
+.stacks .card1 img {
   width: 68px;
   height: 68px;
   flex-shrink: 0;
@@ -1263,14 +1260,29 @@ gap: 16px;
   right: 95%;
   z-index: 1;
 }
+.stacks .card2 img{
+  display: none;
+}
+.stacks .card1 p {
+  opacity: 1;
+}
+
+.stacks .card1 h1 {
+  opacity: 1;
+}
+
+.stacks .card1 span {
+  opacity: 1;
+}
+
 
 .what_people_right .vector {
-  background: url(/assets/Images/Element.png);
+  background: url(/assets/Images/plane_vector.svg);
   width: 168.564px;
   height: 188.06px;
   position: absolute;
-  top: -42%;
-  right: -23%;
+ transform: translateX(300%);
+  
 }
 
 /* get Updated with Latest blog section */
@@ -1626,6 +1638,11 @@ hr {
 .burger_logo {
   display: none;
 }
+@media screen and (max-width: 1300px) {
+ .vector{
+    display: none;
+  }
+}
 
 @media screen and (max-width: 900px) {
   /* Responsive Nav section */
@@ -1885,7 +1902,7 @@ align-items: center;
 
 /* Respnsive Best card Section */
 .best_vacationcontainer{
-  padding: 0px;
+  padding: 1rem;
 }
 .best_plan_texts{
 justify-content: center;
@@ -1901,5 +1918,13 @@ justify-content: center;
 .bestcard{
  margin-inline: auto;
 }
+/* Responsive what people say section */
+
+.what_peoplecontainer{
+  width: 100%;
+  justify-content: center;
+  gap: 1rem;
+}
+
 }
 

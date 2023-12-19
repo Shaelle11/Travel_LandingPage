@@ -223,3 +223,49 @@ function anotherContainerPlusSlides(n) {
 function anotherContainerCurrentSlide(n) {
   slideShow("another-container", n);
 }
+
+
+
+// Card Flip JavaScript
+var flipPosition = 1;
+flipShow(flipPosition);
+
+// forward/Back controls
+function addSlides(n) {
+  flipShow(flipPosition += n);
+}
+
+// images controls
+function presentSlides(n) {
+  // Add your own condition here
+  var allowSlideShow = true;
+
+  if (allowSlideShow) {
+    flipShow(n);
+  }
+}
+
+function flipShow(n) {
+  // Add your own condition here
+  var allowSlideShow = true;
+
+  if (!allowSlideShow) {
+    return; // Do nothing if the custom condition is not met
+  }
+
+  let flipcards = document.getElementsByClassName("stack");
+
+  // Use modulo to loop back to the start or end
+  flipPosition = (n + flipcards.length - 1) % flipcards.length + 1;
+
+  for (let i = 0; i < flipcards.length; i++) {
+   
+      flipcards[i].classList.toggle("card1");
+      flipcards[i].classList.toggle("card2");
+    }
+    //  else {
+    //   flipcards[i].classList.remove("card1");
+    // }
+    flipcards[flipPosition[i]-1].classList.toggle("card2");
+  
+  }
