@@ -1220,7 +1220,7 @@ position: sticky;
 } 
 
 .stacks .stack p {
-  width: 402px;
+  max-width: 402px;
   color: var(--text-color-dark);
   font-family: Poppins;
   font-size: 16px;
@@ -1923,7 +1923,17 @@ justify-content: center;
 .what_peoplecontainer{
   width: 100%;
   justify-content: center;
-  gap: 1rem;
+ 
+  height: auto;
+}
+.stacks{
+  padding: 3rem;
+}
+.stack{
+  width: 80%;
+  margin-inline: auto;
+ 
+  
 }
 
 }
