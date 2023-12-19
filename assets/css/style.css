@@ -1089,12 +1089,11 @@ gap: 16px;
  
 }
 .what_peoplecontainer{
-  
   display: flex;
-
   flex-wrap: wrap;
  margin-inline:auto;
  text-align: center;
+ padding: 200px 0px;
 }
 
 .what_people_left {
@@ -1180,25 +1179,34 @@ gap: 16px;
 
 
 .stacks_container .stacks {
-  position: relative;
-  height: 350px;
-  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  /* perspective: 1000px; */
   transform-style: preserve-3d;
+  
   
 }
 .stacks .card2{
-bottom: 13%;
-top: 40%;
+ 
+ transform: translateY(50%);
+  transition: all 2s ease;
+    transform-style: preserve-3d;
+
+  
+
 }
 .stacks .card1{
-  bottom: 20%;
+  transition: all 2s ease;
  background-color: #fff;
+  transform-style: preserve-3d;
+ top: 1%;
+transform: translateX(-15%);
  z-index: 1;
- 
+ position: absolute;
+
 }
 
  .stack{
-position: sticky;
   width: 504px;
     height: 245px;
   border-radius: 10px;
@@ -1214,7 +1222,6 @@ position: sticky;
   flex-direction: column;
   display: flex;
   align-items: flex-start;
-	transition: all .4s ease, max-height .75s ease;
   text-align: start;
   
 } 
@@ -1281,8 +1288,7 @@ position: sticky;
   width: 168.564px;
   height: 188.06px;
   position: absolute;
- transform: translateX(300%);
-  
+  right: -20%;
 }
 
 /* get Updated with Latest blog section */
@@ -1923,17 +1929,23 @@ justify-content: center;
 .what_peoplecontainer{
   width: 100%;
   justify-content: center;
- 
-  height: auto;
 }
 .stacks{
   padding: 3rem;
+  justify-content: center;
 }
 .stack{
-  width: 80%;
-  margin-inline: auto;
+  width: 100%;
+  height: auto;
  
-  
+}
+.stacks .card1{
+  transform: translateX(0%);
+  width: 80%;
+}
+.stacks .card2{
+  transform: translateY(0%);
+  width: 100%;
 }
 
 }
