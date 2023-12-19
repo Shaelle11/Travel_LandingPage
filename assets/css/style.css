@@ -1936,6 +1936,7 @@ justify-content: center;
 }
 .stack{
   width: 100%;
+  height: auto;
  
 }
 .stacks .card1{
@@ -1943,6 +1944,7 @@ justify-content: center;
   width: 80%;
 }
 .stacks .card2{
+  transform: translateY(0%);
   width: 100%;
 }
 
